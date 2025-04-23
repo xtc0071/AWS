@@ -29,33 +29,32 @@ Make sure you have the following installed:
 
 **Ensure your AWS CLI is configured:**
 
-```bash
-aws configure
-
-**Create S3 BUCKET on AWS via CLI**
-"terraform {
-  backend "s3" {
-    bucket = "your-bucket-name" # Use bucket name
-    key    = "ver1/terraform.tfstate"
-    region = "us-east-2"
-  }
-}"
-
-**Build a var in bash**
-`terraform init -var="bucket_name=your-chosen-bucket"`
+```aws configure```
 
 
+## 📁 Clone the repository
 
-
-
-**Clone the repo and run Terraform **                              
-
-git clone https://github.com/xtc0071/AWS.git
+bash
+```git clone https://github.com/xtc0071/AWS.git```
 cd AWS
 
-terraform init
+🔧 Configure AWS CLI
+aws configure
+
+☁️ Create an S3 bucket
+Make sure you have a bucket ready in AWS (create via AWS Console or CLI). Example CLI command:
+
+```aws s3 mb s3://your-bucket-name```
+
+bash
+Копировать
+Редактировать
+
+
+
+```terraform init
 terraform plan
-terraform apply -auto-approve
+terraform apply -auto-approve```
 
 
 - ✅ **VPC** with custom CIDR: `10.0.0.0/16`

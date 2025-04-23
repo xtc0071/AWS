@@ -41,6 +41,10 @@ aws configure
   }
 }`
 
+**Build a var in bash**
+`terraform init -var="bucket_name=your-chosen-bucket"`
+
+
 
 
 

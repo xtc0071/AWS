@@ -17,8 +17,7 @@ Before running the Terraform code, ensure you have:
 - AWS CLI configured with credentials
 - Appropriate permissions to deploy AWS resources
 
-2️⃣ Clone the repository
-git clone https://github.com/your-repo-name.git
+2️⃣ Clone the repository git clone https://github.com/xtc0071/AWS
 cd your-repo-name
 
 

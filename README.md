@@ -33,13 +33,13 @@ Make sure you have the following installed:
 aws configure
 
 **Create S3 BUCKET on AWS via CLI**
-`terraform {
+"terraform {
   backend "s3" {
     bucket = "your-bucket-name" # Use bucket name
     key    = "ver1/terraform.tfstate"
     region = "us-east-2"
   }
-}`
+}"
 
 **Build a var in bash**
 `terraform init -var="bucket_name=your-chosen-bucket"`

@@ -77,8 +77,7 @@ resource "aws_instance" "tf-niko-production" {
 #Creation of dynamic SG For Every group
 resource "aws_security_group" "my_webserver" {
  name = "Dynamic SG Niko"
- vpc_id = aws_vpc.main.id # This need to be added since AWS Provider v4.29+ to
-set VPC id
+ vpc_id = aws_vpc.main.id # Required since AWS Provider v4.29+
  dynamic "ingress" {
  for_each = ["80", "443", "8080", "22", ]
  content {

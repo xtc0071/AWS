@@ -40,6 +40,18 @@ resource "aws_subnet" "subnet-Development" {
  Name = "Development"
 }
 }
+# Associate the Production subnet with the route table
+resource "aws_route_table_association" "production_assoc" {
+  subnet_id      = aws_subnet.production.id
+  route_table_id = aws_route_table.your_route_table.id
+}
+
+# Associate the Development subnet with the route table
+resource "aws_route_table_association" "development_assoc" {
+  subnet_id      = aws_subnet.subnet-Development.id
+  route_table_id = aws_route_table.your_route_table.id
+}
+
 ############################################
 terraform {
   backend "s3" {
